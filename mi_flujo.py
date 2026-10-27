@@ -1,15 +1,15 @@
-"""Flujo de ___ : (una linea que diga que hace).
-Integrantes: ___
-Fuente: ___ (si es un archivo de EJEMPLO, digalo aqui)
-SI FALLA: ___ (que pasa si la fuente no llega o cambia, y A QUIEN habria que avisar)"""
+"""Flujo de remesas : (una linea que diga que hace).
+Integrantes: Emanuel
+Fuente: BCE (si es un archivo de EJEMPLO, digalo aqui)
+SI FALLA: Director (que pasa si la fuente no llega o cambia, y A QUIEN habria que avisar)"""
 import logging, sys
 from datetime import date
 import pandas as pd
 
 # ---------- 1 · PARAMETROS (todo lo que puede cambiar, junto y arriba) ----------
-RUTA_ENTRADA    = "___"
+RUTA_ENTRADA    = "datos/exportaciones.csv"
 SALIDA          = f"salida/mi_flujo_{date.today().isoformat()}.csv"
-FILAS_ESPERADAS = ___
+FILAS_ESPERADAS = 7
 # agregue aqui otro parametro de comprobacion, por ejemplo un total esperado
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
@@ -18,20 +18,20 @@ log = logging.getLogger("mi_flujo")
 
 # ---------- 2 · LAS TRES FUNCIONES (cada una con su docstring) ----------
 def extraer():
-    """___ (que hace esta funcion)"""
+    """Extraer (que hace esta funcion)"""
     tabla = pd.read_csv(RUTA_ENTRADA)
     log.info("extraidas %d filas", len(tabla))
     return tabla
 
 def transformar(tabla):
-    """___ (que hace esta funcion)"""
+    """Revisa las filas (que hace esta funcion)"""
     if len(tabla) != FILAS_ESPERADAS:
         raise ValueError(f"esperaba {FILAS_ESPERADAS} filas y llegaron {len(tabla)}")
     # AQUI: su transformacion y SU comprobacion que detiene (otro raise).
     return tabla
 
 def cargar(tabla):
-    """___ (que hace esta funcion)"""
+    """Exportar (que hace esta funcion)"""
     import os; os.makedirs("salida", exist_ok=True)
     tabla.to_csv(SALIDA, index=False)
     log.info("guardado %s (%d filas)", SALIDA, len(tabla))

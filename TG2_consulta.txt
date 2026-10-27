@@ -1,6 +1,6 @@
 CONSULTA DOCUMENTADA
-1. ¿De donde sale?   Direccion o ruta exacta: ___    Fecha del corte de la fuente: ___
-2. ¿Que se pidio?    Parametros (juntos, con su valor): ___
-3. ¿Que se esperaba recibir?   Filas / columnas / totales esperados: ___
-4. ¿Que se hizo?     Transformaciones, en orden, cada una con lo que hace: ___
-5. ¿Quien y cuando?  Autor: ___    Fecha: ___    Licencia de la fuente (o 'no la declara'): ___
+1. ¿De donde sale?   Direccion o ruta exacta: datos/exportaciones.csv    Fecha del corte de la fuente: ___
+2. ¿Que se pidio?    Parametros (juntos, con su valor): betas
+3. ¿Que se esperaba recibir?   Filas / columnas / totales esperados: 5
+4. ¿Que se hizo?     Transformaciones, en orden, cada una con lo que hace: Tasas de variación
+5. ¿Quien y cuando?  Autor: BCE    Fecha: 10/26/2026    Licencia de la fuente (o 'no la declara'): ___
